@@ -30,8 +30,8 @@ module Geocoder
         geocoder_init(
           :reverse_geocode => true,
           :fetched_address => options[:address] || :address,
-          :latitude        => latitude_attr,
-          :longitude       => longitude_attr,
+          :latitude        => options[:latitude] || latitude_attr,
+          :longitude       => options[:longitude] || longitude_attr,
           :reverse_block   => block,
           :units           => options[:units],
           :method          => options[:method],
