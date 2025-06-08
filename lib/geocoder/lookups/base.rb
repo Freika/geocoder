@@ -216,6 +216,12 @@ module Geocoder
           Geocoder.log(:warn, "Geocoding API's response was not valid JSON")
           Geocoder.log(:debug, "Raw response: #{data}")
         end
+      ensure
+        log_request(data)
+      end
+
+      def log_request(message = nil)
+        puts "Raw response: #{message}"
       end
 
       ##

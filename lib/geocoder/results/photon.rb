@@ -54,7 +54,7 @@ module Geocoder::Result
     end
 
     def country_code
-      ''
+      properties['countrycode']
     end
 
     def coordinates
